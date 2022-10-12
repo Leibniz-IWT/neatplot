@@ -2,7 +2,8 @@
 Style guideline for plotting data with Python using stylesheets.
 
 # Tutorial
-Minimum working example:
+
+[For detailed explanations please see the accompanying tutorial notebook.](https://github.com/Leibniz-IWT/neatplot/blob/main/stylesheets_intro.ipynb) A minimum working example:
 
 ```python
 import matplotlib.pyplot as plt
@@ -21,5 +22,3 @@ output:
 
 <img src="https://github.com/Leibniz-IWT/neatplot/blob/main/Figure_1.png" width="600">
 
-
-[For more detailed explanations please see the tutorial notebook](https://github.com/Leibniz-IWT/neatplot/blob/main/stylesheets_intro.ipynb)

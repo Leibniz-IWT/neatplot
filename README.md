@@ -20,5 +20,5 @@ plt.show()
 ```
 output:
 
-<img src="https://github.com/Leibniz-IWT/neatplot/blob/main/Figure_1.png" width="600">
+<img src="https://github.com/Leibniz-IWT/neatplot/blob/main/Figure_1.png" width="500">
 

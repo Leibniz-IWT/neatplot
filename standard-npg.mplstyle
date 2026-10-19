@@ -1,0 +1,125 @@
+# Matplotlib style for scientific plotting (NPG Palette + Optimized Settings)
+# all params: https://matplotlib.org/stable/tutorials/introductory/customizing.html
+
+#-------------------------------------------------
+# Set color cycle: Nature Publishing Group (NPG) palette (7 colors)
+axes.prop_cycle : cycler('color', ['3C5488', 'E64B35', '00A087', '4DBBD5', 'F39B7F', '8491B4', '7E6148'])
+
+# Alternative: NPG color and linestyle cycle (for black & white print safety):
+#axes.prop_cycle : (cycler('color', ['3C5488', 'E64B35', '00A087', '4DBBD5', 'F39B7F', '8491B4']) + cycler('ls', ['-', '--', '-.', ':', '-', '--']))
+
+#-------------------------------------------------
+# Set figure & export resolution
+figure.figsize : 3.5, 2.625             # figure size in inches (single-column 4:3)
+figure.dpi : 300                        # dots per inch
+savefig.dpi : 300                       # ensure high resolution on plt.savefig()
+savefig.pad_inches : 0.015              # prevent outer 1pt spines from being clipped
+
+#-------------------------------------------------
+# Set x axis
+xtick.direction : in                    # direction: in, out, inout
+xtick.major.size : 3                    # size of major x-ticks
+xtick.major.width : 0.75                # major tick width in points
+xtick.minor.size : 1.5                  # size of minor x-ticks
+xtick.minor.width : 0.75                # minor tick width in points
+xtick.minor.visible : True              # show minor x-ticks
+xtick.top : True                        # show x-ticks also on top x-axis
+xtick.bottom : True                     # draw ticks on the bottom side
+xaxis.labellocation : center            # alignment of the xaxis label: left, right, center
+xtick.major.pad : 3.5                   # distance to major tick label in points
+xtick.minor.pad : 3.5                   # distance to the minor tick label in points
+
+#-------------------------------------------------
+# Set y axis
+ytick.direction : in                    # direction: in, out, inout
+ytick.major.size : 3                    # size of major y-ticks
+ytick.major.width : 0.75                # major tick width in points
+ytick.minor.size : 1.5                  # size of minor y-ticks
+ytick.minor.width : 0.75                # minor tick width in points
+ytick.minor.visible : True              # show minor y-ticks
+ytick.right : True                      # show y-ticks also on right side
+ytick.left : True                       # show y-ticks on left y-axis
+yaxis.labellocation : center            # alignment of the yaxis label: bottom, top, center
+ytick.major.pad : 3.5                   # distance to major tick label in points
+ytick.minor.pad : 3.5                   # distance to the minor tick label in points
+
+#-------------------------------------------------
+# More axis settings
+axes.titlepad : 6.0                     # pad between axes and title in points
+axes.labelpad : 4.0                     # space between label and axis
+axes.formatter.limits : -5, 6           # use scientific notation if log10 of the axis range is smaller than the first or larger than the second
+axes.formatter.min_exponent : 0         # minimum exponent to format in scientific notation
+axes.spines.left : True                 # display axis spines, False to hide
+axes.spines.bottom : True
+axes.spines.top : True
+axes.spines.right : True
+
+#-------------------------------------------------
+# Grid
+axes.grid : False                       # show: True, Hide: False
+axes.grid.axis : both                   # which axis the grid should apply to {x, y, both}
+axes.grid.which : both                  # grid lines at {major, minor, both} ticks
+grid.color : b0b0b0                     # grid color
+grid.linestyle : -                      # --, -., :
+grid.linewidth : 0.5                    # in points
+grid.alpha : 0.3                        # transparency, between 0.0 and 1.0
+
+#-------------------------------------------------
+# Set line widths
+axes.linewidth : 1                      # line width of the axes (bounding rectangle)
+lines.linewidth : 1.0                   # width of the individual data lines
+lines.markersize : 3.5                  # size of markers (data points)
+
+#-------------------------------------------------
+# Legend
+legend.frameon : True                   # show frame of the legend
+legend.framealpha : 1                   # legend patch transparency
+legend.facecolor : white                # background color
+legend.edgecolor : white                # invisible border
+legend.loc : best                       # automatic best location
+legend.markerscale : 0.8                # relative size of legend markers vs. original
+legend.handlelength : 1                 # length of the legend lines
+
+#-------------------------------------------------
+# Errorbar
+errorbar.capsize : 2                    # size of the caps (Begrenzung der Fehlerbalken)
+
+#-------------------------------------------------
+# Font sizes
+axes.labelsize : 8                      # font size of axis labels/titles
+xtick.labelsize : 8                     # font size of x-tick labels
+ytick.labelsize : 8                     # font size of y-tick labels
+legend.fontsize : 7                     # font size of the legend labels
+font.size : 10                          # general font size
+
+#-------------------------------------------------
+# Font Family (Default: Arial / Sans-Serif)
+font.family : sans-serif
+font.sans-serif : Arial, Helvetica, Liberation Sans, DejaVu Sans
+mathtext.fontset : stixsans             # sans-serif math font matching Arial/Helvetica
+
+# Alternative: Times / Serif (uncomment the 3 lines below and comment out the 3 lines above)
+#font.family : serif
+#font.serif : Times New Roman, Times, Liberation Serif, Nimbus Roman, DejaVu Serif
+#mathtext.fontset : stix
+
+#-------------------------------------------------
+# Editable fonts in vector exports (PDF / EPS / SVG)
+pdf.fonttype : 42                       # embed TrueType fonts (editable in Illustrator/Inkscape)
+ps.fonttype : 42                        # embed TrueType fonts in PostScript/EPS
+svg.fonttype : none                     # export text as <text> elements instead of paths
+
+#-------------------------------------------------
+# Use LaTeX for text formatting
+text.usetex : False                     # disable external LaTeX rendering
+
+#-------------------------------------------------
+# Use constrained layout for figure
+figure.constrained_layout.use : True
+
+#-------------------------------------------------
+# Set padding
+figure.constrained_layout.h_pad : 0.015 # horizontal pad (left/right)
+figure.constrained_layout.w_pad : 0.015 # vertical pad (bottom/top)
+figure.constrained_layout.hspace : 0.03 # horizontal space between multi-column subplots
+figure.constrained_layout.wspace : 0.03 # vertical space between multi-row subplots
